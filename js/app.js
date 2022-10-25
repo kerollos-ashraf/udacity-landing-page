@@ -32,14 +32,14 @@ const sections = Array.from(document.querySelectorAll('section'));
  * 
 */
 
-function createListItem(){
+function createListOfItem(){
     for(sec of sections){
         listItem = document.createElement('li');
         listItem.innerHTML = `<li><a href="${sec.id}" data-nav="${sec.id}" class="menu__link">${sec.dataset.nav}</a></li>`;
         navList.appendChild(listItem);
     }
 }
-createListItem();
+createListOfItem();
 
 
 
