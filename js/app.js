@@ -41,20 +41,7 @@ function createListItem(){
 }
 createListItem();
 
-//style for active 
 
-window.onscroll = function () {
-    document.querySelectorAll('section').forEach(function (active){
-        if(
-            active.getBoundingClientRect().top >= -400 &&
-            active.getBoundingClientRect().top <= 150
-        ){
-            active.classList.add('your-active-class');
-        }else{
-            active.classList.remove('your-active-class');
-        }
-    });
-};
 
 //when click on nav item, scroll to the element
 
@@ -80,19 +67,19 @@ navList.addEventListener('click',(toSec)=>{
 
 
 // Add class 'active' to section when near top of viewport
-
-
 // Scroll to anchor ID using scrollTO event
+window.onscroll = function () {
+    document.querySelectorAll('section').forEach(function (active){
+        if(
+            active.getBoundingClientRect().top >= -400 &&
+            active.getBoundingClientRect().top <= 150
+        ){
+            active.classList.add('your-active-class');
+        }else{
+            active.classList.remove('your-active-class');
+        }
+    });
+};
 
 
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
 
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
